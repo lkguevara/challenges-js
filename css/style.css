@@ -1,0 +1,93 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*Convierte 1rem en 10px*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    background-color:#161853;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+
+}
+img{
+    width: 30px;
+    height: 30px;
+    display: block;
+    object-fit:cover;
+    margin-left: 5px;
+}
+h1{
+    font-size: 3.4rem;
+    color: white;
+    margin: 10px;
+}
+
+p{
+    font-size: 2.4rem;
+    color: white;
+    margin: 0;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    
+}
+
+.container__welcome{
+    display: flex;
+    align-items: center;
+}
+
+.challenges{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.link{
+    background-color: #654062;
+    margin: 10px;
+    padding:10px;
+    font-size: 2.4rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+   
+}
+
+.link:hover{
+    background-color: #FA9579;
+}
+
+@media (min-width: 768px) { 
+    h1{
+        font-size: 4.4rem;
+        color: white;
+        font-weight: 900;
+    }
+    p{
+        font-size: 3rem;
+        
+    }
+    h2{
+        font-size: 3.6rem;
+    }
+    h3{
+        font-size: 2.8rem;
+    }
+    .link{
+        margin: 10px;
+        padding:5px;
+        display: flex;
+        justify-content:space-around;
+        flex-direction: row;
+    }
+}
