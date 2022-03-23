@@ -1,3 +1,5 @@
+/* font-family: 'Inconsolata', monospace;
+font-family: 'Montserrat', sans-serif; */
 html {
     box-sizing: border-box;
     font-size: 62.5%; /*Convierte 1rem en 10px*/
@@ -7,7 +9,7 @@ html {
 }
 body{
     background-color:rgb(235, 236, 255);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
 
 }
@@ -22,6 +24,7 @@ h1{
     font-size: 3.4rem;
     color: #3A3845;
     margin: 10px;
+    font-family: 'Inconsolata', monospace;
 }
 
 p{
@@ -31,7 +34,7 @@ p{
 }
 
 
-.container{
+.container__challenges{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,13 +77,47 @@ p{
     color: black;
 }
 
+/* color flipper */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+.container h2{
+    background-color: black;
+    padding: 10px 20px;
+    border-radius:10px;
+    text-align: center;
+    color: white;
+}
+span{
+    color: rgb(38, 180, 236);
+}
+
+#reset, #generate {
+    background-color: transparent;
+    padding: 10px 15px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+#reset:hover, #generate:hover{
+    background-color: black;
+    color: white;
+}
+
 @media (min-width: 768px) { 
     h1{
         font-size: 4.4rem;
         font-weight: 900;
     }
     p{
-        font-size: 3rem;
+        font-size: 2.5rem;
         
     }
     h2{
@@ -91,9 +128,10 @@ p{
     }
     .link{
         margin: 10px;
-        padding:5px;
+        padding:10px 20px;
         display: flex;
         justify-content:space-around;
         flex-direction: row;
+        font-size: 2rem;
     }
 }
