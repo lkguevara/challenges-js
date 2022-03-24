@@ -111,6 +111,91 @@ span{
     color: white;
 }
 
+/* To do list */
+.to-do-form{
+    text-align: center;
+    margin-top: 50px;
+}
+.head h1{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.control__form{
+    background-color: #FFCDDF;
+    width: 60%;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #A89B9B;
+
+}
+
+section{
+    margin-top: 30px;
+}
+
+#search{
+    background-color: #fffbfbf1;
+    width: 35%;
+    padding: 7px;
+    border-radius: 4px;
+    border: none;
+    margin-left: 40px;
+
+}
+
+.list__group{
+    width: 90%;
+    margin-top: 30px;
+    padding: 0;
+    border-radius: 10px;
+    display: inline-block;
+    align-items: center;
+    margin-left: 15px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.2);
+}
+
+.list__group li{
+    background: #fff;
+    border-bottom: 1px solid #dee6e1;
+    font-size: inherit;
+    padding: 15px 20px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.borrar{
+    cursor: pointer;
+}
+
+.textFilter{
+    color: #f71e35;
+}
+
+.fa-trash-can{
+    padding-top: 5px;
+    color: #f71e35;
+    font-size: 20px;
+}
+
+.to-do-button{
+    background-color: #DC638E;
+    width: 15%;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #A89B9B;
+    cursor: pointer;
+}
+
+input[type="text"]{
+    /* text-align: center; */
+    color: black;
+}
+
+
+
 @media (min-width: 768px) { 
     h1{
         font-size: 4.4rem;
@@ -134,4 +219,31 @@ span{
         flex-direction: row;
         font-size: 2rem;
     }
+
+    .control__form{
+        background-color: #FFCDDF;
+        width: 30%;
+        padding: 7px;
+        border-radius: 5px;
+        border: 1px solid #A89B9B;
+    
+    }
+    
+    .to-do-button{
+        background-color: #DC638E;
+        width: 7%;
+        padding: 7px;
+        border-radius: 5px;
+        border: 1px solid #A89B9B;
+    }
+
+    #search{
+        width: 15%;
+    
+    }
+
+    .list__group{
+        width: 30%;
+        margin-left: 40px;
+    }   
 }
