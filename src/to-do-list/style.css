@@ -1,0 +1,163 @@
+/* font-family: 'Inconsolata', monospace;
+font-family: 'Montserrat', sans-serif */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*Convierte 1rem en 10px*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    background-color:rgb(235, 236, 255);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+
+}
+
+.container__welcome img{
+    width: 30px;
+    height: 30px;
+    display: block;
+    object-fit:cover;
+    margin-left: 5px;
+}
+h1{
+    font-size: 3.4rem;
+    color: #3A3845;
+    margin: 10px;
+    font-family: 'Inconsolata', monospace;
+}
+
+p{
+    font-size: 2.4rem;
+    color: #3A3845;
+    margin: 0;
+}
+
+#fecha{
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+}
+.to-do-form{
+    text-align: center;
+    margin-top: 50px;
+}
+.head h1{
+    text-align: center;
+    
+}
+
+.control__form{
+    background-color: #FFCDDF;
+    width: 60%;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #A89B9B;
+
+}
+
+input[type="text"]{
+    /* text-align: center; */
+    color: black;
+}
+
+.to-do-button{
+    background-color: #DC638E;
+    width: 10%;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #A89B9B;
+    cursor: pointer;
+}
+
+.task__section{
+    margin-top: 50px;
+    text-align: center;
+    
+}
+
+.list__group{
+    width: 80%;
+    margin-top: 30px;
+    padding: 0;
+    border-radius: 10px;
+    display: inline-block;
+    align-items: center;
+    margin-left: 15px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.2);
+}
+
+.list__group li{
+    background: #fff;
+    border-bottom: 1px solid #dee6e1;
+    font-size: inherit;
+    padding: 6px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.task__section p{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.task__section i:hover{
+    color:#DC638E;
+    cursor: pointer;
+}
+
+.fa-circle{
+    font-size: 1.3rem;
+    padding:5px;
+}
+.fa-trash-can{
+    padding-top: 5px;
+    color: #f71e35;
+    font-size: 20px;
+}
+
+.text{
+    padding-left: 10px;
+}
+
+.line-through {
+    text-decoration: line-through;
+    color: #5c5c5c;
+}
+
+@media (min-width: 768px) { 
+    .control__form{
+        background-color: #FFCDDF;
+        width: 20%;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #A89B9B;
+    
+    }
+    
+    .to-do-button{
+        background-color: #DC638E;
+        width: 3%;
+        padding: 7px;
+        border-radius: 5px;
+        border: 1px solid #A89B9B;
+    }
+
+    .list__group{
+        width: 25%;
+    }   
+
+    .task__section p{
+        font-size: 2.4rem;
+    }
+
+    .fa-circle{
+        font-size: 1.5rem;
+    }
+}

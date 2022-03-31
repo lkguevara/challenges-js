@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../../images/to-do-list.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9e0e1c36c0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container__todolist">
+
+         <div class="head">  <!-- perfil -->
+            <div id="fecha">Miercoles 30 de marzo</div>
+            <h1>TO DO LIST</h1>
+            <span></span>
+        </div>
+        
+        <form id="create__form" class="to-do-form"> <!-- agregarTarea -->
+            <input id="input" class="control__form" type="text" placeholder="Name task">
+            <button id="submit" class="to-do-button">Add</button>
+        </form>
+    
+        <section class="task__section">
+            <p>Tareas pendientes</p>
+
+            <ul id="task__list" class="list__group">
+                <li>
+                    <i class="far fa-circle co" data="finish" id="0"></i>
+                    <h2 class="text">comer</h2>
+                    <i class="fa-solid fa-trash-can borrar ata="delete" id="0""></i>
+                </li>
+                <li>
+                    <i class="far fa-circle co" data="finish" id="0"></i>
+                    <h2 class="text">estudiar</h2>
+                    <i class="fa-solid fa-trash-can borrar ata="delete" id="0""></i>
+                </li>
+                <li>
+                    <i class="far fa-circle co" data="finish" id="0"></i>
+                    <h2 class="text">leer</h2>
+                    <i class="fa-solid fa-trash-can borrar ata="delete" id="0""></i>
+                </li>
+              
+
+            </ul>
+        </section>
+        
+    </div>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
