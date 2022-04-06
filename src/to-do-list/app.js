@@ -24,18 +24,25 @@ const addTask = (task, id, completed, removed) => {
                         <li id="element">
                             <i class="far ${COMPLETED}" data="completed" id="${id}"></i>
                             <h2 class="text ${LINE}">${task}</h2>
-                            <i class="fa-solid fa-trash-can borrar data="removed" id="${id}"></i>
+                            <i class="fa-solid fa-trash-can borrar" data="removed" id="${id}"></i>
                         </li> 
                     `
 
     list.insertAdjacentHTML("beforeend", elemento);   //element.insertAdjacentHTML(posición, texto); Agrega cada tarea pero de última
 }
 
-// * Función tarea realizada o eliminada
+// * Función tarea realizada 
     function taskCompleted(element) {
         element.classList.toggle(check);
         element.classList.toggle(uncheck);
         element.parentNode.querySelector('.text').classList.toggle(lineThrough);
+      
+    }
+
+
+// * Función tarea eliminada 
+    function taskRemoved(element) {
+        element.parentNode.parentNode.removeChild(element.parentNode);
       
     }
 
@@ -55,12 +62,13 @@ submit.addEventListener('click', (e)  => {
     id++
 });
 
-//* 2. Finalizar una tarea 
+
+//* Finalizar una tarea 
 
 list.addEventListener('click', function(event) {
-    // e.preventDefault (); 
+    
     const element = event.target
-    const elementData = element.attributes.data.value    
+    const elementData = element.attributes.data.value;
 
     // console.log(element)
     // console.log(element.attributes)
