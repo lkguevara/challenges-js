@@ -7,10 +7,10 @@ const submit = document.querySelector('#submit'); // botón para agregar la tare
 const check = 'fa-check-circle';
 const uncheck = 'fa-circle';
 const lineThrough = 'line-through';
-let id= 0;
+let id
 
 // local storage
-const LIST = []
+let LIST 
 
 
 //* Crear fecha
@@ -77,6 +77,9 @@ submit.addEventListener('click', (e)  => {
             removed:false
         });
     }
+    //* Aplicando local storage
+    localStorage.setItem('TODO',JSON.stringify(LIST));
+
     input.value = ''
     id++
     // console.log(LIST);
@@ -98,5 +101,29 @@ list.addEventListener('click', function(event) {
         taskCompleted(element)
     }
     else if (elementData === 'removed')
-        taskRemoved(element)
+        taskRemoved(element);
+
+    localStorage.setItem('TODO',JSON.stringify(LIST));
 });
+
+// local storage get item 
+
+let data = localStorage.getItem('TODO');
+if (data) {
+    LIST=JSON.parse(data);
+    id=LIST.length;
+    cargarLista(LIST);
+
+}else{
+    LIST= []
+    id=0
+}
+
+function cargarLista(DATA) {
+    DATA.forEach(element => {
+        addTask(element.nombre,element.id,element.completed,element.removed)
+    });
+};
+
+
+
