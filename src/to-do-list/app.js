@@ -9,6 +9,15 @@ const uncheck = 'fa-circle';
 const lineThrough = 'line-through';
 let id= 0;
 
+// local storage
+const LIST = []
+
+
+//* Crear fecha
+
+const DATE = new Date();
+date.innerHTML = DATE.toLocaleDateString('es-CO', {weekday: 'long', month: 'short', day: 'numeric'} )
+
 //* función agregar tarea
 
 const addTask = (task, id, completed, removed) => {
@@ -36,6 +45,9 @@ const addTask = (task, id, completed, removed) => {
         element.classList.toggle(check);
         element.classList.toggle(uncheck);
         element.parentNode.querySelector('.text').classList.toggle(lineThrough);
+        
+        LIST[element.id].completed = LIST[element.id].completed ? false : true
+        
       
     }
 
@@ -43,6 +55,7 @@ const addTask = (task, id, completed, removed) => {
 // * Función tarea eliminada 
     function taskRemoved(element) {
         element.parentNode.parentNode.removeChild(element.parentNode);
+        LIST[element.id].removed = true
       
     }
 
@@ -57,9 +70,16 @@ submit.addEventListener('click', (e)  => {
     
     if (task) {
         addTask(task, id, false, false)
+        LIST.push({
+            nombre:task,
+            id:id,
+            completed: false,
+            removed:false
+        });
     }
     input.value = ''
     id++
+    // console.log(LIST);
 });
 
 
